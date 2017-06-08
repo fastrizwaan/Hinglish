@@ -1,0 +1,801 @@
+# (C) Mohammed Asif Ali Rizvan 2017
+# This feature file is released under GNU GPLv3, the font glyphs are in OFL
+
+languagesystem DFLT dflt;
+languagesystem latn dflt;
+languagesystem latn deva;
+languagesystem latn dev2;
+
+# default shapes be used when used in the middle of a word
+
+# default shapes be used when used in the middle of a word
+
+@symbs=[ space colon hyphen comma ];
+
+#GLYPHS
+#Devanagari glyphs which needs transliteration
+@glyph=[ l.ka   l.kh    l.ga   l.gha 
+         l.ca   l.cha   l.ja   l.jha  l.nya 
+         l.tta  l.ttha  l.dda  l.ddha l.nna
+         l.ta   l.tha   l.da   l.dha  l.na 
+         l.pa   l.pha   l.ba   l.bha  l.ma 
+         l.ya   l.ra    l.la   l.va   l.sha l.ssa 
+         l.sa   l.ha    l.qa   l.khha l.ghha 
+         l.za   l.dddha l.dddhha 
+         l.fa   l.gya
+
+         l.an   l.aan  l.in   l.iin  l.un  
+         l.uun  l.en   l.ain  l.on   l.aun
+         l.can  l.caan l.cin  l.ciin l.cun 
+         l.cuun l.cen  l.cain l.con  l.caun
+         l.a    l.aa   l.i    l.ii   l.u   
+         l.uu   l.vr   l.e    l.ai   l.o  l.au
+];
+
+#Latin glyphs which will be replaced when the glyph is at the end of a word 
+@glyph.half=[
+         ka.half  kh.half    ga.half  gha.half 
+         ca.half  cha.half   ja.half  jha.half  nya.half 
+         tta.half ttha.half  dda.half ddha.half nna.half 
+         ta.half  tha.half   da.half  dha.half  na.half 
+         pa.half  pha.half   ba.half  bha.half  ma.half 
+         ya.half  ra.half    la.half  va.half   sha.half ssa.half 
+         sa.half  ha.half    qa.half  khha.half ghha.half 
+         za.half  dddha.half dddhha.half 
+         fa.half  gya.alt
+         
+         an.alt   aan.alt  in.alt   iin.alt  un.alt  
+         uun.alt  en.alt   ain.alt  on.alt   aun.alt  
+         can.alt  caan.alt cin.alt  ciin.alt 
+         cun.alt  cuun.alt cen.alt  cain.alt con.alt caun.alt
+         a.alt    aa.alt   i.alt    ii.rep   u.alt   
+         uu.alt   vr.alt   e.alt    ai.alt   o.alt au.alt 
+
+];
+
+#replacement for devanagari @glyph in the start or middle of a word
+@glyph.rep=[   
+         ka.rep  kh.rep    ga.rep  gha.rep 
+         ca.rep  cha.rep   ja.rep  jha.rep  nya.rep 
+         tta.rep ttha.rep  dda.rep ddha.rep nna.rep 
+         ta.rep  tha.rep   da.rep  dha.rep  na.rep 
+         pa.rep  pha.rep   ba.rep  bha.rep  ma.rep 
+         ya.rep  ra.rep    la.rep  va.rep   sha.rep  ssa.rep 
+         sa.rep  ha.rep    qa.rep  khha.rep ghha.rep 
+         za.rep  dddha.rep dddhha.rep 
+         fa.rep  gya.rep
+         
+         an.rep   aan.rep  in.rep   iin.rep  un.rep  
+         uun.rep  en.rep   ain.rep  on.rep   aun.rep   
+         can.rep  caan.rep cin.rep  ciin.rep cun.rep 
+         cuun.rep cen.rep  cain.rep con.rep  caun.rep
+         a.alt    aa.alt   i.alt    ii.rep   u.alt   
+         uu.alt   vr.alt   e.alt    ai.alt   o.alt au.alt
+
+];
+
+# need to make yah to yeh rah to reh kah to keh
+@glypheh=[ 
+         l.ka   l.kh    l.ga   l.gha 
+         l.ca   l.cha   l.ja   l.jha  l.nya 
+         l.tta  l.ttha  l.dda  l.ddha l.nna
+         l.ta   l.tha   l.da   l.dha  l.na 
+         l.pa   l.pha   l.ba   l.bha  l.ma 
+         l.ya   l.ra    l.la   l.va   l.sha l.ssa 
+         l.sa   l.ha    l.qa   l.khha l.ghha 
+         l.za   l.dddha l.dddhha 
+         l.fa   
+];
+
+@glypheh.half=[
+         ka.half  kh.half    ga.half  gha.half 
+         ca.half  cha.half   ja.half  jha.half  nya.half 
+         tta.half ttha.half  dda.half ddha.half nna.half 
+         ta.half  tha.half   da.half  dha.half  na.half 
+         pa.half  pha.half   ba.half  bha.half  ma.half 
+         ya.half  ra.half    la.half  va.half   sha.half ssa.half 
+         sa.half  ha.half    qa.half  khha.half ghha.half 
+         za.half  dddha.half dddhha.half 
+         fa.half 
+];
+@glypheh.rep=[   
+         ka.rep  kh.rep    ga.rep  gha.rep 
+         ca.rep  cha.rep   ja.rep  jha.rep  nya.rep 
+         tta.rep ttha.rep  dda.rep ddha.rep nna.rep 
+         ta.rep  tha.rep   da.rep  dha.rep  na.rep 
+         pa.rep  pha.rep   ba.rep  bha.rep  ma.rep 
+         ya.rep  ra.rep    la.rep  va.rep   sha.rep  ssa.rep 
+         sa.rep  ha.rep    qa.rep  khha.rep ghha.rep 
+         za.rep  dddha.rep dddhha.rep 
+         fa.rep 
+];
+# required for proper yeh, reh as yeh jo desh, rehna hai
+@glyph.eh=[ka.eh kh.eh ga.eh gha.eh ca.eh cha.eh ja.eh jha.eh nya.eh tta.eh ttha.eh dda.eh ddha.eh nna.eh ta.eh tha.eh da.eh dha.eh na.eh pa.eh pha.eh ba.eh bha.eh ma.eh ya.eh ra.eh la.eh va.eh sha.eh ssa.eh sa.eh ha.eh qa.eh khha.eh ghha.eh za.eh dddha.eh dddhha.eh fa.eh];
+
+
+# Matra and combinations
+#Devanagari matra combination forms like ि ा ु ू
+@matra=[     vs.aa  vs.i   vs.ii   vs.u   vs.uu   vs.e   vs.ai   vs.o   vs.au  
+             vs.aan vs.in  vs.iin  vs.un  vs.uun  vs.en  vs.ain  vs.on  vs.aun 
+             vs.caan vs.cin vs.ciin vs.cun vs.cuun vs.cen vs.cain vs.con vs.caun
+
+	     vs.vr vs.an vs.can 
+       ]; 
+
+#Devanagari matra start and middle of a word and end too aa ee oo aan aa ein
+@matra.rep=[ aa.alt   i.alt   ii.alt   u.alt   uu.alt   e.alt   ai.alt   o.alt   au.alt 
+             aan.alt  in.alt  iin.alt  un.alt  uun.alt  en.alt  ain.alt  on.alt  aun.alt
+             caan.alt cin.alt ciin.alt cun.alt cuun.alt cen.alt cain.alt con.alt caun.alt
+
+             vr.alt an.alt can.alt 
+       ];
+
+#maten and matra are same, but use in feature file differens, matra in the middle, maten in the middle
+@maten=[     vs.aa  vs.i   vs.ii   vs.u   vs.uu   vs.e   vs.ai   vs.o   vs.au  
+             vs.aan vs.in  vs.iin  vs.un  vs.uun  vs.en  vs.ain  vs.on  vs.aun 
+             vs.caan vs.cin vs.ciin vs.cun vs.cuun vs.cen vs.cain vs.con vs.caun
+
+	     vs.vr vs.an vs.can 
+       ]; 
+
+#aa, ii and uu are different in last of a word (jaadoo becomes jaadu (here uu)
+@maten.rep=[ aa.rep   i.alt   ii.rep   u.alt   uu.rep   e.alt   ai.alt   o.alt   au.alt   
+             aan.rep  in.rep  iin.rep  un.rep  uun.rep  en.rep  ain.rep  on.rep  aun.rep  
+             caan.rep cin.rep ciin.rep cun.rep cuun.rep cen.rep cain.rep con.rep caun.rep
+
+             vr.alt an.rep can.rep ];
+
+
+#####
+
+#samb letters pa, pha, ba and bha प फ ब भ and half प फ ब भ needed for anusvara an to am (san'bandh to sam'bandh)
+@samb=[pa.half pha.half ba.half bha.half pa.rep pha.rep ba.rep bha.rep];
+
+
+# bindu and chandrabindu matras replacements with sambandh
+@smbmat =   [  aan.alt  in.alt  iin.alt  un.alt  uun.alt  en.alt  ain.alt  on.alt  aun.alt
+               caan.alt cin.alt ciin.alt cun.alt cuun.alt cen.alt cain.alt con.alt caun.alt
+               aan.rep  in.rep  iin.rep  un.rep  uun.rep  en.rep  ain.rep  on.rep  aun.rep 
+               caan.rep cin.rep ciin.rep cun.rep cuun.rep cen.rep cain.rep con.rep caun.rep
+               an.alt can.alt an.rep can.rep
+];
+@smbmat.rep=[  aam.alt  im.alt  iim.alt  um.alt  uum.alt  em.alt  aim.alt  om.alt  aum.alt
+               caam.alt cim.alt ciim.alt cum.alt cuum.alt cem.alt caim.alt com.alt caum.alt
+               aam.rep  im.rep  iim.rep  um.rep  uum.rep  em.rep  aim.rep  om.rep  aum.rep 
+               caam.rep cim.rep ciim.rep cum.rep cuum.rep cem.rep caim.rep com.rep caum.rep
+               am.alt cam.alt am.rep cam.rep
+];
+
+
+	#0. preprocess combinations like k+nukt => क़ ; vs.e + 
+	feature liga { 
+
+		
+		# क + ़ => क़
+		sub l.ka   s.nukta by l.qa;
+		sub l.kh   s.nukta by l.khha;
+		sub l.ga   s.nukta by l.ghha;
+		sub l.ja   s.nukta by l.za;
+		sub l.dda  s.nukta by l.dddha;
+		sub l.ddha s.nukta by l.dddhha;
+		sub l.pha  s.nukta by l.fa;
+		
+		# Create anusvara combinations
+		sub vs.aa vs.an by vs.aan; # ां
+		sub vs.i  vs.an by vs.in;  # िं
+		sub vs.ii vs.an by vs.iin; # ीं
+		sub vs.u  vs.an by vs.un;  # ुं
+		sub vs.uu vs.an by vs.uun; # ूं
+		sub vs.e  vs.an by vs.en;  # ें
+		sub vs.ai vs.an by vs.ain; # ैं
+		sub vs.o  vs.an by vs.on;  # ों
+              	sub vs.au vs.an by vs.aun; # ौं
+
+		# Create chandrabindu combinations
+		sub vs.aa vs.can by vs.caan; # ाँ
+		sub vs.i  vs.can by vs.cin;  # िँ
+		sub vs.ii vs.can by vs.ciin; # ीँ
+		sub vs.u  vs.can by vs.cun;  # ुँ
+		sub vs.uu vs.can by vs.cuun; # ूँ
+		sub vs.e  vs.can by vs.cen;  # ेँ
+		sub vs.ai vs.can by vs.cain; # ैँ
+		sub vs.o  vs.can by vs.con;  # ोँ
+              	sub vs.au vs.can by vs.caun; # ौँ
+
+		# replace l.aa + anusvara (आं) to ां
+		sub l.a  vs.an by l.an; # ं
+		sub l.aa vs.an by l.aan; # ां
+		sub l.i  vs.an by l.in;  # िं
+		sub l.ii vs.an by l.iin; # ीं
+		sub l.u  vs.an by l.un;  # ुं
+		sub l.uu vs.an by l.uun; # ूं
+		sub l.e  vs.an by l.en;  # ें
+		sub l.ai vs.an by l.ain; # ैं 
+		sub l.o  vs.an by l.on;  # ों
+		sub l.au vs.an by l.aun; # ौं
+
+		# replace l.aa + chandrabindu (आँ) to ाँ
+		sub l.a  vs.can by l.can; # ँ
+		sub l.aa vs.can by l.caan; # ाँ
+		sub l.i  vs.can by l.cin;  # िँ
+		sub l.ii vs.can by l.ciin; # ीँ
+		sub l.u  vs.can by l.cun;  # ुँ
+		sub l.uu vs.can by l.cuun; # ूँ
+		sub l.e  vs.can by l.cen;  # ेँ
+		sub l.ai vs.can by l.cain; # ैँ
+		sub l.o  vs.can by l.con;  # ोँ
+              	sub l.au vs.can by l.caun; # ौँ
+		
+
+		# ज+ञ = ज्ञ 
+		sub l.ja vs.virama l.nya  by l.gya;
+
+
+
+		# half forms
+		sub l.ka vs.virama by ka.half;
+		sub l.kh vs.virama by kh.half;
+		sub l.ga vs.virama by ga.half;
+		sub l.gha vs.virama by gha.half;
+		sub l.ca vs.virama by ca.half;
+		sub l.cha vs.virama by cha.half;
+		sub l.ja vs.virama by ja.half;
+		sub l.jha vs.virama by jha.half;
+		sub l.nya vs.virama by nya.half;
+		sub l.tta vs.virama by tta.half;
+		sub l.ttha vs.virama by ttha.half;
+		sub l.dda vs.virama by dda.half;
+		sub l.ddha vs.virama by ddha.half;
+		sub l.nna vs.virama by nna.half;
+		sub l.ta vs.virama by ta.half;
+		sub l.tha vs.virama by tha.half;
+		sub l.da vs.virama by da.half;
+		sub l.dha vs.virama by dha.half;
+		sub l.na vs.virama by na.half;
+		sub l.pa vs.virama by pa.half;
+		sub l.pha vs.virama by pha.half;
+		sub l.ba vs.virama by ba.half;
+		sub l.bha vs.virama by bha.half;
+		sub l.ma vs.virama by ma.half;
+		sub l.ya vs.virama by ya.half;
+		sub l.ra vs.virama by ra.half;
+		sub l.la vs.virama by la.half;
+		sub l.va vs.virama by va.half;
+		sub l.sha vs.virama by sha.half;
+		sub l.ssa vs.virama by ssa.half;
+		sub l.sa vs.virama by sa.half;
+		sub l.ha vs.virama by ha.half;
+		sub l.qa vs.virama by qa.half;
+		sub l.khha vs.virama by khha.half;
+		sub l.ghha vs.virama by ghha.half;
+		sub l.za vs.virama by za.half;
+		sub l.dddha vs.virama by dddha.half;
+		sub l.dddhha vs.virama by dddhha.half;
+		sub l.fa vs.virama by fa.half;
+		
+
+
+		# other 
+		sub vs.danda by period;
+		
+		# numbers ०-९ to 0-9
+		sub l.zero    by zero; 
+		sub l.one     by one;  
+		sub l.two     by two;  
+		sub l.three   by three;
+		sub l.four    by four;
+		sub l.five    by five;
+                sub l.six     by six;
+                sub l.seven   by seven;
+                sub l.eight   by eight;
+                sub l.nine    by nine;
+
+
+	} liga;
+
+
+#IG	ि क	ik (i here is middle matra ीक eek)
+#GI      क ी	ki (end.dev.matra by default)
+#GG	क क	kak
+#G	क	k
+#I	ी	i (instead of ee)
+#
+#
+#जहाँ 	कहते 	हो 	बरतन	कहानी
+#GGI 	GGGI 	GI 	GGGG	GGIGI
+#
+#
+## 1st loop
+#order IG,GI,GG,G,I
+#
+## GGIGI
+#कहानी 		IG (ान)	=>	कहaanी	
+#कहaanी		GI (null)	=> 	कहaanी
+#कहaanी		GG (कह)	=>	kah'aanी
+#kah'aanी	G (null)	=>	kah'aanी
+#kah'aanी	I (ी)		=>	kahaani (end form)
+#
+
+
+
+
+# GIGGGIGI	मुसलमानी 
+feature liga { sub @glyph @matra @glyph @glyph' @glyph @matra @glyph @matra by @glyph.half;} liga;
+
+# GIGGGIG	मुसलमान 
+feature liga { sub @glyph @matra @glyph @glyph' @glyph @matra @glyph by @glyph.half;} liga;
+
+# GIGIGGG	मिलीभगत
+feature liga { sub @glyph @matra @glyph @matra @glyph'    @glyph      @glyph  by @glyph.rep;} liga;
+feature liga { sub @glyph @matra @glyph @matra @glyph.rep @glyph'     @glyph  by @glyph.rep;} liga;
+feature liga { sub @glyph @matra @glyph @matra @glyph.rep @glyph.rep  @glyph' by @glyph.half;} liga;
+
+# GIGIGIG	वैज्ञानिक
+feature liga { sub @glyph @matra @glyph @matra @glyph @matra    @glyph'  by @glyph.half;} liga;
+
+# 6 character words
+#GGGGGG	समलकलम बरतनकर लपटकरत वहनपरक vahan'parak'
+feature liga { sub @glyph    @glyph     @glyph       @glyph'     @glyph      @glyph         by @glyph.rep   ;} liga;
+
+
+#GGGGGI समयकरी समलकली वहनपरा करतसबी
+feature liga { sub @glyph    @glyph     @glyph       @glyph     @glyph       @maten'         by @maten.rep    ;} liga;
+
+# GGGGIG महरबान
+feature liga { sub l.ma    @glyph      @glyph'       @glyph      @matra      @glyph         by @glyph.half   ;} liga;
+
+#GGGGIG	बदतमीज़ बदकलाम बदहवास bad'ta m'ee z'
+feature liga { sub @glyph    @glyph      @glyph'       @glyph      @matra      @glyph         by @glyph.rep   ;} liga;
+
+#GGGIGG	करनीबन पलकितन सरतुलन बलबुतर bal'b'utar'
+feature liga { sub @glyph    @glyph      @glyph       @matra     @glyph'         @glyph         by @glyph.rep   ;} liga;
+feature liga { sub @glyph    @glyph      @glyph       @matra     @glyph.rep      @glyph'         by @glyph.half   ;} liga;
+
+
+#GGGIGI	परजीवी par'j'eev'i
+feature liga { sub @glyph'       @glyph       @glyph       @matra     @glyph       @maten         by @glyph.rep    ;} liga;
+feature liga { sub @glyph.rep    @glyph'      @glyph       @matra     @glyph       @maten         by @glyph.half   ;} liga;
+
+
+#GGIGGG	समानतर 
+#feature liga { sub @glyph    @glyph      @maten       @glyph      @glyph      @glyph'         by @glyph.half   ;} liga;
+
+
+#GGIGGI तलाशना ठनाठनी tal'ash'n'a (talashanaa)
+#feature liga { sub @glyph    @glyph      @maten       @glyph      @glyph       @maten'        by @maten.rep    ;} liga;
+
+#GGIGIG	समाजिक अबाबील हवालात
+#feature liga { sub @glyph    @glyph      @maten       @glyph        @matra       @glyph'        by @glyph.half   ;} liga;
+
+
+#GIGGGG	हिमपरक 
+feature liga { sub @glyph    @matra     @glyph'       @glyph     @glyph      @glyph         by @glyph.half   ;} liga;
+
+
+#GIGGGI	निरजरा 
+feature liga { sub @glyph    @matra     @glyph'       @glyph     @glyph       @maten'         by @glyph.half    ;} liga;
+
+
+#GIGGIG	हाथपैर जातपात बिलकुल चुपचाप
+feature liga { sub @glyph    @matra     @glyph'       @glyph      @matra       @glyph          by @glyph.half   ;} liga;
+
+
+#GIGIGG	डिजिटल विधिवत सिटिज़न
+feature liga { sub @glyph    @maten     @glyph       @maten     @glyph'       @glyph          by @glyph.rep   ;} liga;
+feature liga { sub @glyph    @maten     @glyph       @maten     @glyph.rep    @glyph'         by @glyph.half   ;} liga;
+
+#GIGIGI	सैलानी हैरानी शैतानी बाज़ारू
+#feature liga { sub @glyph    @maten     @glyph       @matra     @glyph      @maten'        by @maten.rep   ;} liga;
+
+
+# GGGGG	समयकर पलटकर लपटकर बदलकर (4th changed so that 3 GGG work)
+feature liga { sub @glyph'  @glyph     @glyph      @glyph     @glyph         by @glyph.rep  ;} liga; #(5) बदलकर  -> बदलकr	
+
+#GIGGG	कुतरन सिरहन वितरण  चितवन जानवर (OK)
+feature liga { sub @glyph  @maten     @glyph'      @glyph      @glyph         by @glyph.half  ;} liga; #(5) जानवर    -> जानवr'	
+
+#GIGGI	जिसमें कितने लिखना किसमें तिरछी वीरता 
+feature liga { sub @glyph  @matra     @glyph'      @glyph      @maten        by @glyph.half   ;} liga; #(5) जानवर    -> जानवr'	
+
+
+#GGIGG	शहादत फजीहत समंदर रहीमन कबूत'र (kabutar) shahadat
+feature liga { sub @glyph'  @glyph      @maten      @glyph     @glyph         by @glyph.rep  ;} liga; #(5) बदलकर  -> बदलकr	
+
+
+#GGIGI	क़बीला रवीना सलीख़ा ज'वानी क'हानी
+feature liga { sub @glyph'  @glyph      @matra      @glyph       @maten         by @glyph.rep   ;} liga; #(5) बदलकर  -> बदलकr	
+
+# आवाज़ aavaaz -> awaaz
+feature liga { sub l.aa' l.va' vs.aa' l.za'      by caan.temp  ;} liga;
+feature liga { sub caan.temp          by a w a a z  ;} liga;
+
+#GGGIG	तकनीक बलवीर परवाज़ बरबाद बग़दाद (
+feature liga { sub @glyph  @glyph'  @glyph  @matra   @glyph      by @glyph.half  ;} liga;
+
+
+#GGGGI	पकडना भड़कना चहकना मसलना चमकना टहलती चमकती (OK)
+feature liga { sub @glyph'  @glyph     @glyph      @glyph      @maten         by @glyph.rep   ;} liga; #(5) बदलकर  -> बदलकr	
+
+#GIGIG	मासिक बेताल क़ातिल जाहिल बाजार मालूम' (maalum to maloom)
+feature liga { sub @glyph  @maten     @glyph      @matra     @glyph'         by @glyph.half  ;} liga;
+feature liga { sub @glyph  @maten     @glyph      @matra'    @glyph.half     by @matra.rep   ;} liga;
+feature liga { sub @glyph  @maten     @glyph'     @matra.rep @glyph.half     by @glyph.half  ;} liga;
+feature liga { sub @glyph  @maten'    @glyph.half @matra.rep @glyph.half     by @maten.rep   ;} liga;
+feature liga { sub @glyph' @maten.rep @glyph.half @matra.rep @glyph.half     by @glyph.half   ;} liga; 
+
+
+#1.FOUR GLYPHS (GGGG) बरकत हरकत समतल करतब
+feature liga { sub @glyph  @glyph      @glyph     @glyph'     by @glyph.half  ;} liga; #(4) करतब  -> करतb	
+feature liga { sub @glyph  @glyph      @glyph'    @glyph.half by @glyph.rep   ;} liga; #(3) करतb  -> करtab
+feature liga { sub @glyph  @glyph'     @glyph.rep @glyph.half by @glyph.half  ;} liga; #(2) करtab -> कrtab
+feature liga { sub @glyph' @glyph.half @glyph.rep @glyph.half by @glyph.rep   ;} liga; #(1) कrtab -> kartab
+
+#3 THREE GLYPH + GLYPH + MATRA + GLYPH ; (GGIG) कमीज फ़रीद फ़कीर हरित समीर समान हराम
+feature liga { sub @glyph   @glyph      @matra      @glyph'         by @glyph.half   ;} liga; #(3) KKIK -> KKIk
+feature liga { sub @glyph   @glyph      @matra'     @glyph.half     by @matra.rep    ;} liga; #(3) KKKi -> KKki
+feature liga { sub @glyph   @glyph'     @matra.rep  @glyph.half     by @glyph.half   ;} liga; #(2) KKki -> Kkki
+feature liga { sub @glyph'  @glyph.half @matra.rep  @glyph.half     by @glyph.rep    ;} liga; #(1) Kkki -> kakki
+
+#2 THREE GLYPH + MATRA + GLYPH + GLYPH ; (GIGG) किरण हिरन सुमन मिथक मिलन बाहर सूरत साजन काजल
+feature liga { sub @glyph   @maten      @glyph      @glyph'         by @glyph.half   ;} liga; #(3) KIKK -> KIKk
+feature liga { sub @glyph   @maten      @glyph'     @glyph.half     by @glyph.rep    ;} liga; #(3) KKKi -> KKki
+feature liga { sub @glyph   @maten'     @glyph.rep  @glyph.half     by @maten.rep    ;} liga; #(2) KKki -> Kkki
+feature liga { sub @glyph'  @maten.rep  @glyph.rep  @glyph.half     by @glyph.half   ;} liga; #(1) Kkki -> kakki
+
+
+# हमको - hamko -> humko
+feature liga { sub l.ha' l.ma' l.ka' vs.o' by caan.temp  ;} liga;
+feature liga { sub caan.temp          by h u m k o ;} liga;
+
+
+#2 THREE GLYPHS + ONE ENDING MATRA (GGGI) सरदी मरता करती बरफ़ी
+feature liga { sub @glyph   @glyph      @glyph      @maten'     by @maten.rep;} liga; #(4) KKKI -> KKKi
+feature liga { sub @glyph   @glyph      @glyph'     @maten.rep  by @glyph.half   ;} liga; #(3) KKKi -> KKki
+feature liga { sub @glyph   @glyph'     @glyph.half @maten.rep  by @glyph.half   ;} liga; #(2) KKki -> Kkki
+feature liga { sub @glyph'  @glyph.half @glyph.half @maten.rep  by @glyph.rep    ;} liga; #(1) Kkki -> kakki
+
+
+
+# वाही - vaahi -> waahi
+feature liga { sub l.va' vs.aa' l.ha' vs.ii' by caan.temp  ;} liga;
+feature liga { sub caan.temp          by w a a h i ;} liga;
+
+
+#2.1 THREE WITH MATRAS ALTERNATE (GIGI) रानी जाना खाली बिना तेरे जानू jaanu (last one will be U instead of oo)
+feature liga { sub @glyph   @matra      @glyph      @maten'     by @maten.rep;} liga; #(4) KIKI -> KKKi
+feature liga { sub @glyph   @matra      @glyph'     @maten.rep  by @glyph.half   ;} liga; #(3) KIKi -> KIki
+feature liga { sub @glyph   @matra'     @glyph.half @maten.rep  by @matra.rep    ;} liga; #(2) KIki -> Kiki
+feature liga { sub @glyph'  @matra.rep  @glyph.half @maten.rep  by @glyph.half   ;} liga; #(1) Kiki -> kiki
+
+#वजह vajah -> wajah
+feature liga { sub l.va' l.ja' l.ha' by caan.temp  ;} liga;
+feature liga { sub caan.temp          by w a j a h ;} liga;
+
+#3 THREE GLYPHS (GGG) समय तरल वज़न हरण
+feature liga { sub @glyph @glyph @glyph' by @glyph.half;} liga;         # (3) KKK-> KKk
+feature liga { sub @glyph @glyph' @glyph.half by @glyph.rep;} liga;     # (2) KKk -> Kkak 
+feature liga { sub @glyph' @glyph.rep @glyph.half by @glyph.rep;} liga; # (1) Kkak->kakak
+
+
+# वहां vahaan -> wahan
+feature liga { sub l.va' l.ha' vs.aan' by caan.temp;} liga;
+feature liga { sub caan.temp          by w a h a a n  ;} liga;
+
+# वहाँ vahaan -> wahan
+feature liga { sub l.va' l.ha' vs.caan' by caan.temp;} liga;
+feature liga { sub caan.temp          by w a h a a n  ;} liga;
+
+
+# वहीं vahin -> wahin
+feature liga { sub l.va' l.ha' vs.iin' by caan.temp;} liga;
+feature liga { sub caan.temp          by w a h i n  ;} liga;
+
+
+# वही vahi -> wohi
+feature liga { sub l.va' l.ha' vs.ii' by caan.temp;} liga;
+feature liga { sub caan.temp          by w o h i  ;} liga;
+
+
+#4 TWO GLYPHS + ONE ENDING MATRA (GGI) नही करे चले करो करू
+feature liga { sub @glyph @glyph @maten' by @maten.rep;} liga;      #(3) KKI -> KKi
+feature liga { sub @glyph @glyph' @maten.rep by @glyph.half;} liga;         #(2) KKi-> Kki
+feature liga { sub @glyph' @glyph.half @maten.rep by @glyph.rep;} liga;     #(1) Kki-> kki
+
+# वाह - vaah -> waah
+feature liga { sub l.va' vs.aa' l.ha' by caan.temp;} liga;
+feature liga { sub caan.temp          by w a a h  ;} liga;
+
+# 4.1 TWO GLYPHS WITH ONE MATRA IN BETWEEN (GIG) जान जिन किन हाँ jaan jin haan
+feature liga { sub @glyph @matra @glyph' by @glyph.half;} liga;                # (3) KIK -> KIk
+feature liga { sub @glyph @matra' @glyph.half by @matra.rep;} liga;            # (2) KIk -> Kik
+feature liga { sub @glyph' @matra.rep @glyph.half by @glyph.half;} liga;       # (1) Kik -> kik
+
+# वह vah -> woh
+feature liga { sub l.va'   l.ha'   by caan.temp     ;} liga;
+feature liga { sub caan.temp by w o h;} liga;
+
+# fix reh yeh meh seh deh यह रह सह नह कह पह
+feature liga { sub @glypheh'   l.ha  by @glyph.eh;} liga;
+feature liga { sub @glyph.eh   l.ha' by ha.half;} liga;
+
+# हम ham->hum
+feature liga { sub l.ha'   l.ma'   by caan.temp     ;} liga;
+feature liga { sub caan.temp by h u m;} liga;
+
+
+
+#3 TWO GLYPHS (GG) सम तल वन रण
+feature liga { sub @glyph @glyph' by @glyph.half;} liga;         # (2) KK-> Kk
+feature liga { sub @glyph' @glyph.half by @glyph.rep;} liga;     # (1) Kk -> kak 
+
+# माँ maan -> maa
+feature liga { sub l.ma   vs.caan' by  aa.alt;} liga;
+feature liga { sub l.ma'  aa.alt   by  ma.half;} liga;
+
+
+# मां maan -> maa
+feature liga { sub l.ma   vs.aan' by  aa.alt ;} liga;
+feature liga { sub l.ma'  aa.alt  by  ma.half;} liga;
+
+
+# वो vo -> wo
+feature liga { sub l.va'   vs.o'   by caan.temp     ;} liga;
+feature liga { sub caan.temp by w o ;} liga;
+
+
+#6 ONE GLYPHS + ONE ENDING MATRA (GI) ही रे ले रो रू
+feature liga { sub @glyph @maten' by @maten.rep;} liga;      #(2) KKI -> KKi
+feature liga { sub @glyph' @maten.rep by @glyph.half;} liga;         #(1) KKi-> Kki
+
+
+
+
+############## SINGLE GLYPH SUBSTITUTION ####################
+# space glyph space to full glyph
+#feature liga { sub space @glyph' space by @glyph.rep;} liga;                # (3) KIK -> KIk
+
+
+# matra end form
+feature liga { sub @matra' by @maten.rep;} liga;         # (2) KK-> Kk
+
+#trying full form instead of half
+# glyph standard to half form only
+feature liga { sub @glyph' by @glyph.rep;} liga;     # (1) Kk -> kak .
+
+#finally remove all halant with null (chanakya चाणक्य) had virma issue
+#feature liga { sub vs.virama' by .null;} liga;     # (1) Kk -> kak .
+
+
+
+# Fix संबंध sambandh सांप तांबा लंपट शंभू shambhu
+feature liga { sub @smbmat'  @samb by @smbmat.rep      ;} liga; # ka m b काँप
+
+# reh keh kehne behan रह कह कहने बहन 
+# followed by glyph+h+space or glyph+g+glyph should be glyph.rep to glyph.eh
+
+feature liga { sub @glypheh.rep' ha.rep  @glypheh.rep  by @glyph.eh;} liga; #
+feature liga { sub @glypheh.rep' ha.half @glypheh.rep  by @glyph.eh;} liga; # रहकर कहकर  
+feature liga { sub @glypheh.rep' ha.rep  @glypheh.half by @glyph.eh;} liga; # बहन
+feature liga { sub @glypheh.rep' ha.half @glypheh.half by @glyph.eh;} liga;
+
+
+
+############################# NOW REPLACE GLYPHS with latin characters!!!! #######################################
+
+feature liga {
+sub ba.eh by b e ; 
+sub bha.eh by b h e ; 
+sub ca.eh by c h e ; 
+sub cha.eh by c h h e ; 
+sub da.eh by d e ; 
+sub dda.eh by d e ; 
+sub dddha.eh by  d e ; 
+sub dddhha.eh by d h e ; 
+sub ddha.eh by d e ; 
+sub dha.eh by d h e ; 
+sub fa.eh by f e ; 
+sub ga.eh by g e ; 
+sub gha.eh by g h e ; 
+sub ghha.eh by g e ; 
+sub ha.eh by h e ; 
+sub ja.eh by j e ; 
+sub jha.eh by j h e ; 
+sub ka.eh by k e ; 
+sub kh.eh by k h e ; 
+sub khha.eh by k h e ; 
+sub la.eh by l e ; 
+sub ma.eh by m e ; 
+sub na.eh by n e ; 
+sub nna.eh by n e ; 
+sub nya.eh by n y e ; 
+sub pa.eh by p e ; 
+sub pha.eh by p h e ; 
+sub qa.eh by q e ; 
+sub ra.eh by r e ; 
+sub sa.eh by s e ; 
+sub sha.eh by s h e ; 
+sub ssa.eh by s h e ; 
+sub ta.eh by t e ; 
+sub tha.eh by t h e ; 
+sub tta.eh by t e ; 
+sub ttha.eh by t h e ; 
+sub va.eh by v e ; 
+sub ya.eh by y e ; 
+sub za.eh by z e ; 
+sub aa.alt by a a ; 
+sub a.alt by a ; 
+sub aam.alt by a a m ; 
+sub aan.alt by a a n ; 
+sub ai.alt by a i ; 
+sub aim.alt by a i m ; 
+sub ain.alt by a i n ; 
+sub am.alt by a m ; 
+sub an.alt by a n ; 
+sub au.alt by a u ; 
+sub aum.alt by a u m ; 
+sub aun.alt by a u n ; 
+sub caam.alt by a a m ; 
+sub caan.alt by a a n ; 
+sub caim.alt by a i m ; 
+sub cain.alt by a i n ; 
+sub cam.alt by  a m ; 
+sub can.alt by  a n ; 
+sub caum.alt by a u m ; 
+sub caun.alt by a u n ; 
+sub cem.alt by  e m ; 
+sub cen.alt by  e n ; 
+sub ciim.alt by  i m ; 
+sub ciin.alt by  i n ; 
+sub cim.alt by  i m ; 
+sub cin.alt by  i n ; 
+sub com.alt by  o m ; 
+sub con.alt by  o n ; 
+sub cum.alt by  u m ; 
+sub cun.alt by  u n ; 
+sub cuum.alt by o o m ; 
+sub cuun.alt by o o n ; 
+sub e.alt by e ; 
+sub em.alt by e m ; 
+sub en.alt by e n ; 
+sub gya.alt by g y a ; 
+sub i.alt by i ; 
+sub ii.alt by e e ; 
+sub iim.alt by e e m ; 
+sub iin.alt by e e n ; 
+sub im.alt by i m ; 
+sub in.alt by i n ; 
+sub o.alt by o ; 
+sub om.alt by o m ; 
+sub on.alt by o n ; 
+sub u.alt by u ; 
+sub um.alt by u m ; 
+sub un.alt by u n ; 
+sub uu.alt by u u ; 
+sub uum.alt by u u m ; 
+sub uun.alt by u u n ; 
+sub vr.alt by  r i; 
+sub ba.half by b ; 
+sub bha.half by b h ; 
+sub ca.half by c h ; 
+sub cha.half by c h h ; 
+sub da.half by d  ; 
+sub dda.half by d h  ; 
+sub dddha.half by d h ; 
+sub dddhha.half by d h  ; 
+sub ddha.half by d h  ; 
+sub dha.half by d  ; 
+sub fa.half by f ; 
+sub ga.half by g ; 
+sub gha.half by g h  ; 
+sub ghha.half by g h ; 
+sub ha.half by h ; 
+sub ja.half by j ; 
+sub jha.half by j h ; 
+sub ka.half by k  ; 
+sub khha.half by k h ; 
+sub kh.half by k h ; 
+sub la.half by l  ; 
+sub ma.half by m ; 
+sub na.half by n ; 
+sub nna.half by n ; 
+sub nya.half by n y ; 
+sub pa.half by p ; 
+sub pha.half by p h ; 
+sub qa.half by q ; 
+sub ra.half by r ; 
+sub sa.half by s ; 
+sub sha.half by s h ; 
+sub ssa.half by s h ; 
+sub ta.half by t ; 
+sub tha.half by t h ; 
+sub tta.half by t ; 
+sub ttha.half by t h  ; 
+sub va.half by v ; 
+sub ya.half by y ; 
+sub za.half by z ; 
+sub aam.rep by a a m ; 
+sub aan.rep by a a n ; 
+sub aa.rep by a a ; 
+sub aim.rep by a i m ; 
+sub ain.rep by a i n ; 
+sub am.rep by a m ; 
+sub an.rep by a n ; 
+sub aum.rep by a u m ; 
+sub aun.rep by a u n ; 
+sub ba.rep by b a ; 
+sub bha.rep by b h a ; 
+sub caam.rep by a a m ; 
+sub caan.rep by a a n ; 
+sub caim.rep by a i m ; 
+sub cain.rep by a i n ; 
+sub cam.rep by  a m ; 
+sub can.rep by a n ; 
+sub ca.rep by c h a ; 
+sub caum.rep by a u m ; 
+sub caun.rep by a u n ; 
+sub cem.rep by e i m ; 
+sub cen.rep by e i n ; 
+sub cha.rep by c h h a ; 
+sub ciim.rep by e e m ; 
+sub ciin.rep by e e n ; 
+sub cim.rep by i m ; 
+sub cin.rep by i n ; 
+sub com.rep by o m ; 
+sub con.rep by o n ; 
+sub cum.rep by u m ; 
+sub cun.rep by u n ; 
+sub cuum.rep by  o o m ; 
+sub cuun.rep by  o o n ; 
+sub da.rep by d a ; 
+sub dda.rep by d a ; 
+sub dddha.rep by d h a ; 
+sub dddhha.rep by d h a ; 
+sub ddha.rep by d h a ; 
+sub dha.rep by d h a ; 
+sub em.rep by e m ; 
+sub en.rep by e n ; 
+sub fa.rep by f a ; 
+sub ga.rep by g a ; 
+sub gha.rep by g h a ; 
+sub ghha.rep by g a ; 
+sub gya.rep by g y a ; 
+sub ha.rep by h a ; 
+sub iim.rep by i m ; 
+sub iin.rep by i n ; 
+sub ii.rep by i ; 
+sub im.rep by i m ; 
+sub in.rep by i n ; 
+sub ja.rep by j a ; 
+sub jha.rep by  j h a ; 
+sub ka.rep by k a ; 
+sub khha.rep by k h a ; 
+sub kh.rep by k h ; 
+sub la.rep by l a ; 
+sub ma.rep by m a ; 
+sub na.rep by n a ; 
+sub nna.rep by n a ; 
+sub nya.rep by n y a ; 
+sub om.rep by o m ; 
+sub on.rep by o n ; 
+sub pa.rep by p a ; 
+sub pha.rep by p h a ; 
+sub qa.rep by q a ; 
+sub ra.rep by r a ; 
+sub sa.rep by s a ; 
+sub sha.rep by s h a ; 
+sub ssa.rep by s h a ; 
+sub ta.rep by  t a ; 
+sub tha.rep by t h a ; 
+sub tta.rep by t a ; 
+sub ttha.rep by t h a ; 
+sub um.rep by u m ; 
+sub un.rep by u n ; 
+sub uum.rep by u m ; 
+sub uun.rep by u n ; 
+sub uu.rep by  u ; 
+sub va.rep by v a ; 
+sub ya.rep by y a ; 
+sub za.rep by z a ; 
+
+} liga;
+
