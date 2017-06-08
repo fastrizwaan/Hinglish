@@ -6,8 +6,10 @@ The benefit is that those who can't read devanagari script but can read english 
 The motive behind making this font is to make a not so literate people into highly literate people. 
 
 Here's Hindi unicoded text
+
 ![](https://github.com/fastrizwaan/Hinglish/raw/master/Hindi.png)
 
 
 When Hinglish font is used, the devanagari text transliterates to Roman English, 
+
 ![](https://github.com/fastrizwaan/Hinglish/raw/master/Roman.png)
