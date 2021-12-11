@@ -1,3 +1,5 @@
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/fastrizwaan)
+
 # Hinglish
 Hinglish font is a font which transliterates unicode devanagari text into Roman English like Hindi speaking people use SMS using English alphabets. Transliteration logic is programmed into the OTF (opentype features file), hence this font can be used in web browsers and word processors to transliterate Hindi to Roman English.
 
